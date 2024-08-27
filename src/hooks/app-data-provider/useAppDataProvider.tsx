@@ -73,17 +73,14 @@ const AppDataContext = React.createContext<AppDataContextType>({} as AppDataCont
  */
 export const AppDataProvider: React.FC = ({ children }) => {
   const { currentAccount } = useWeb3Context();
-
   const currentMarketData = useRootStore((state) => state.currentMarketData);
   const currentMarket = useRootStore((state) => state.currentMarket);
   // pool hooks
-
   const { data: reservesData, isLoading: reservesDataLoading } =
     usePoolReservesHumanized(currentMarketData);
   const { data: formattedPoolReserves, isLoading: formattedPoolReservesLoading } =
     usePoolFormattedReserves(currentMarketData);
   const baseCurrencyData = reservesData?.baseCurrencyData;
-  // user hooks
 
   const eModes = reservesData?.reservesData ? formatEmodes(reservesData.reservesData) : {};
 

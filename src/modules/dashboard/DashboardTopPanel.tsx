@@ -11,7 +11,7 @@ import { FormattedNumber } from 'src/components/primitives/FormattedNumber';
 import { ROUTES } from 'src/components/primitives/Link';
 import { PageTitle } from 'src/components/TopInfoPanel/PageTitle';
 import { useModalContext } from 'src/hooks/useModal';
-import { useProtocolDataContext } from 'src/hooks/useProtocolDataContext';
+// import { useProtocolDataContext } from 'src/hooks/useProtocolDataContext';
 import { useWeb3Context } from 'src/libs/hooks/useWeb3Context';
 import { useRootStore } from 'src/store/root';
 import { selectIsMigrationAvailable } from 'src/store/v3MigrationSelectors';
@@ -25,7 +25,11 @@ import { useAppDataContext } from '../../hooks/app-data-provider/useAppDataProvi
 import { LiquidationRiskParametresInfoModal } from './LiquidationRiskParametresModal/LiquidationRiskParametresModal';
 
 export const DashboardTopPanel = () => {
-  const { currentNetworkConfig, currentMarketData, currentMarket } = useProtocolDataContext();
+  const { currentNetworkConfig, currentMarketData, currentMarket } = useRootStore((store) => ({
+    currentNetworkConfig: store.currentNetworkConfig,
+    currentMarketData: store.currentMarketData,
+    currentMarket: store.currentMarket,
+  }));
 
   const { market } = getMarketInfoById(currentMarket);
   const { user, reserves, loading } = useAppDataContext();

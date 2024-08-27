@@ -3,7 +3,7 @@ import { Box, Typography } from '@mui/material';
 import { useEffect, useState } from 'react';
 import StyledToggleButton from 'src/components/StyledToggleButton';
 import StyledToggleButtonGroup from 'src/components/StyledToggleButtonGroup';
-import { useProtocolDataContext } from 'src/hooks/useProtocolDataContext';
+// import { useProtocolDataContext } from 'src/hooks/useProtocolDataContext';
 import { useRootStore } from 'src/store/root';
 
 import { ConnectWalletPaper } from '../src/components/ConnectWalletPaper';
@@ -15,7 +15,7 @@ import { DashboardTopPanel } from '../src/modules/dashboard/DashboardTopPanel';
 
 export default function Home() {
   const { currentAccount, loading: web3Loading } = useWeb3Context();
-  const { currentMarket } = useProtocolDataContext();
+  const currentMarket = useRootStore((store) => store.currentMarket);
   const trackEvent = useRootStore((store) => store.trackEvent);
 
   const [mode, setMode] = useState<'supply' | 'borrow' | ''>('supply');

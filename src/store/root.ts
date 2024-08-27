@@ -56,6 +56,7 @@ if (typeof document !== 'undefined') {
 
       if (selectedMarket) {
         const currentMarket = useRootStore.getState().currentMarket;
+        console.log(currentMarket);
         const setCurrentMarket = useRootStore.getState().setCurrentMarket;
         if (selectedMarket !== currentMarket) {
           setCurrentMarket(selectedMarket as CustomMarket, true);
