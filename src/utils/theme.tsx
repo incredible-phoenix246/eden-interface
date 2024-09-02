@@ -136,57 +136,57 @@ export const getDesignTokens = (mode: 'light' | 'dark') => {
     palette: {
       mode,
       primary: {
-        main: getColor('#383D51', '#EAEBEF'),
-        light: getColor('#62677B', '#F1F1F3'),
-        dark: getColor('#292E41', '#D2D4DC'),
-        contrast: getColor('#FFFFFF', '#0F121D'),
+        main: getColor('#1E5631', '#A3D89C'), // Deep Green for light mode, Light Green for dark mode
+        light: getColor('#A3D89C', '#E9F5E9'), // Light Green for light mode, even lighter green for dark mode
+        dark: getColor('#154922', '#1E5631'), // Darker Green for light mode, Deep Green for dark mode
+        contrast: getColor('#FFFFFF', '#0F121D'), // White for light mode, dark blue/black for dark mode
       },
       secondary: {
-        main: getColor('#FF607B', '#F48FB1'),
-        light: getColor('#FF607B', '#F6A5C0'),
-        dark: getColor('#B34356', '#AA647B'),
+        main: getColor('#8B5E3B', '#5B3A27'), // Earthy Brown for both modes, darker in dark mode
+        light: getColor('#B87D56', '#7A533A'), // Lighter Earthy Brown for both modes
+        dark: getColor('#623718', '#3E1F0C'), // Darker Earthy Brown for both modes
       },
       error: {
         main: getColor('#BC0000B8', '#F44336'),
         light: getColor('#D26666', '#E57373'),
         dark: getColor('#BC0000', '#D32F2F'),
-        '100': getColor('#4F1919', '#FBB4AF'), // for alert text
-        '200': getColor('#F9EBEB', '#2E0C0A'), // for alert background
+        '100': getColor('#4F1919', '#FBB4AF'),
+        '200': getColor('#F9EBEB', '#2E0C0A'),
       },
       warning: {
         main: getColor('#F89F1A', '#FFA726'),
         light: getColor('#FFCE00', '#FFB74D'),
         dark: getColor('#C67F15', '#F57C00'),
-        '100': getColor('#63400A', '#FFDCA8'), // for alert text
-        '200': getColor('#FEF5E8', '#301E04'), // for alert background
+        '100': getColor('#63400A', '#FFDCA8'),
+        '200': getColor('#FEF5E8', '#301E04'),
       },
       info: {
         main: getColor('#0062D2', '#29B6F6'),
         light: getColor('#0062D2', '#4FC3F7'),
         dark: getColor('#002754', '#0288D1'),
-        '100': getColor('#002754', '#A9E2FB'), // for alert text
-        '200': getColor('#E5EFFB', '#071F2E'), // for alert background
+        '100': getColor('#002754', '#A9E2FB'),
+        '200': getColor('#E5EFFB', '#071F2E'),
       },
       success: {
         main: getColor('#4CAF50', '#66BB6A'),
         light: getColor('#90FF95', '#90FF95'),
         dark: getColor('#318435', '#388E3C'),
-        '100': getColor('#1C4B1E', '#C2E4C3'), // for alert text
-        '200': getColor('#ECF8ED', '#0A130B'), // for alert background
+        '100': getColor('#1C4B1E', '#C2E4C3'),
+        '200': getColor('#ECF8ED', '#0A130B'),
       },
       text: {
-        primary: getColor('#303549', '#F1F1F3'),
+        primary: getColor('#1E5631', '#A3D89C'), // Deep Green for primary text
         secondary: getColor('#62677B', '#A5A8B6'),
         disabled: getColor('#D2D4DC', '#62677B'),
         muted: getColor('#A5A8B6', '#8E92A3'),
-        highlight: getColor('#383D51', '#C9B3F9'),
+        highlight: getColor('#1E5631', '#A3D89C'), // Highlight text with green
       },
       background: {
         default: getColor('#F1F1F3', '#1B2030'),
         paper: getColor('#FFFFFF', '#292E41'),
         surface: getColor('#F7F7F9', '#383D51'),
         surface2: getColor('#F9F9FB', '#383D51'),
-        header: getColor('#2B2D3C', '#1B2030'),
+        header: getColor('#154922', '#1B2030'), // Darker Green for header background
         disabled: getColor('#EAEBEF', '#EBEBEF14'),
       },
       divider: getColor('#EAEBEF', '#EBEBEF14'),
@@ -202,8 +202,8 @@ export const getDesignTokens = (mode: 'light' | 'dark') => {
         standardInputLine: getColor('#383D511F', '#EBEBEF6B'),
       },
       gradients: {
-        aaveGradient: 'linear-gradient(248.86deg, #B6509E 10.51%, #2EBAC6 93.41%)',
-        newGradient: 'linear-gradient(79.67deg, #8C3EBC 0%, #007782 95.82%)',
+        aaveGradient: 'linear-gradient(248.86deg, #154922 10.51%, #A3D89C 93.41%)', // Green gradient
+        newGradient: 'linear-gradient(79.67deg, #154922 0%, #1E5631 95.82%)', // Another Green gradient
       },
     },
     spacing: 4,

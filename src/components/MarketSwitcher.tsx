@@ -1,11 +1,11 @@
-import { ChevronDownIcon } from '@heroicons/react/outline';
+// import { ChevronDownIcon } from '@heroicons/react/outline';
 import { Trans } from '@lingui/macro';
 import {
   Box,
   BoxProps,
   ListItemText,
   MenuItem,
-  SvgIcon,
+  // SvgIcon,
   TextField,
   Tooltip,
   Typography,
@@ -13,10 +13,10 @@ import {
   useTheme,
 } from '@mui/material';
 import React, { useState } from 'react';
-import { useRootStore } from 'src/store/root';
+// import { useRootStore } from 'src/store/root';
 import { BaseNetworkConfig } from 'src/ui-config/networksConfig';
-import { DASHBOARD } from 'src/utils/mixPanelEvents';
 
+// import { DASHBOARD } from 'src/utils/mixPanelEvents';
 import { useProtocolDataContext } from '../hooks/useProtocolDataContext';
 import {
   availableMarkets,
@@ -31,10 +31,10 @@ import StyledToggleButton from './StyledToggleButton';
 import StyledToggleButtonGroup from './StyledToggleButtonGroup';
 
 export const MULTIPLE_MARKET_OPTIONS = [
-  CustomMarket.proto_mainnet_v3,
-  CustomMarket.proto_lido_v3,
-  'fork_proto_lido_v3',
-  'fork_proto_mainnet_v3',
+  // CustomMarket.proto_mainnet_v3,
+  // CustomMarket.proto_lido_v3,
+  // 'fork_proto_lido_v3',
+  // 'fork_proto_mainnet_v3',
 ];
 
 export const getMarketInfoById = (marketId: CustomMarket) => {
@@ -46,14 +46,15 @@ export const getMarketInfoById = (marketId: CustomMarket) => {
 
 export const getMarketHelpData = (marketName: string) => {
   const testChains = [
-    'Görli',
-    'Ropsten',
-    'Mumbai',
-    'Sepolia',
-    'Fuji',
-    'Testnet',
-    'Kovan',
-    'Rinkeby',
+    'AssetChain',
+    // 'Görli',
+    // 'Ropsten',
+    // 'Mumbai',
+    // 'Sepolia',
+    // 'Fuji',
+    // 'Testnet',
+    // 'Kovan',
+    // 'Rinkeby',
   ];
 
   const arrayName = marketName.split(' ');
@@ -124,14 +125,16 @@ enum SelectedMarketVersion {
 }
 
 export const MarketSwitcher = () => {
-  const { currentMarket, setCurrentMarket } = useProtocolDataContext();
+  const { currentMarket } = useProtocolDataContext();
+  // const { currentMarket, setCurrentMarket } = useProtocolDataContext();
+
   const [selectedMarketVersion, setSelectedMarketVersion] = useState<SelectedMarketVersion>(
     SelectedMarketVersion.V3
   );
   const theme = useTheme();
   const upToLG = useMediaQuery(theme.breakpoints.up('lg'));
   const downToXSM = useMediaQuery(theme.breakpoints.down('xsm'));
-  const trackEvent = useRootStore((store) => store.trackEvent);
+  // const trackEvent = useRootStore((store) => store.trackEvent);
 
   const isV3MarketsAvailable = availableMarkets
     .map((marketId: CustomMarket) => {
@@ -141,10 +144,10 @@ export const MarketSwitcher = () => {
     })
     .some((item) => !!item);
 
-  const handleMarketSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
-    trackEvent(DASHBOARD.CHANGE_MARKET, { market: e.target.value });
-    setCurrentMarket(e.target.value as unknown as CustomMarket);
-  };
+  // const handleMarketSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
+  //   trackEvent(DASHBOARD.CHANGE_MARKET, { market: e.target.value });
+  //   setCurrentMarket(e.target.value as unknown as CustomMarket);
+  // };
 
   return (
     <TextField
@@ -152,7 +155,7 @@ export const MarketSwitcher = () => {
       aria-label="select market"
       data-cy="marketSelector"
       value={currentMarket}
-      onChange={handleMarketSelect}
+      // onChange={handleMarketSelect}
       sx={{
         mr: 2,
         '& .MuiOutlinedInput-notchedOutline': {
@@ -162,10 +165,11 @@ export const MarketSwitcher = () => {
       SelectProps={{
         native: false,
         className: 'MarketSwitcher__select',
-        IconComponent: (props) => (
-          <SvgIcon fontSize="medium" {...props}>
-            <ChevronDownIcon />
-          </SvgIcon>
+        IconComponent: () => (
+          // <SvgIcon fontSize="medium" {...props}>
+          //   <ChevronDownIcon />
+          // </SvgIcon>
+          <></>
         ),
         renderValue: (marketId) => {
           const { market, network } = getMarketInfoById(marketId as CustomMarket);
@@ -199,7 +203,7 @@ export const MarketSwitcher = () => {
                       background: (theme) => theme.palette.gradients.aaveGradient,
                     }}
                   >
-                    <Typography variant="subheader2">V3</Typography>
+                    {/* <Typography variant="subheader2">V3</Typography> */}
                   </Box>
                 ) : (
                   <Box
@@ -210,7 +214,7 @@ export const MarketSwitcher = () => {
                       backgroundColor: '#383D51',
                     }}
                   >
-                    <Typography variant="subheader2">V2</Typography>
+                    {/* <Typography variant="subheader2">V2</Typography> */}
                   </Box>
                 )}
               </Box>

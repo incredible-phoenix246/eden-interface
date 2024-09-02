@@ -1,5 +1,5 @@
 {
-  "name": "aave-ui",
+  "name": "eden-ui",
   "version": "1.0.0",
   "private": true,
   "license": "BSD-3-Clause",
@@ -33,7 +33,6 @@
   "dependencies": {
     "@aave/contract-helpers": "1.29.1",
     "@aave/math-utils": "1.29.1",
-    "@bgd-labs/aave-address-book": "^3.0.1",
     "@eden-labs/address-book": "3.0.2",
     "@emotion/cache": "11.10.3",
     "@emotion/react": "11.10.4",
@@ -137,18 +136,7 @@
     "@web3-react/walletlink-connector/@coinbase/wallet-sdk": "3.1.0"
   },
   "contributors": [
-    "Anastasia Khovaeva <anastasia@aave.com>",
-    "Andrew Schmidt <andrew@aave.com>",
-    "David Racero <david.k@aave.com>",
-    "Diego Prudencio <diego@aave.com>",
-    "Drew Cook <drew.c@aave.com>",
-    "Lukas Strassel <lukas@aave.com>",
-    "Mark Grothe <mark.g@aave.com",
-    "Mark Hinschberger <mark@aave.com>",
-    "Nikita Bokarev <nikita@aave.com>",
-    "Oleksandr Tkach <oleksandr@aave.com>",
-    "Pol Sendra <pol@aave.com>",
-    "Vladimir Konstantinovich Yumatov <vladimir@aave.com>"
+    "Alfred Johnson <alfred@eden.finance>"
   ],
   "lint-staged": {
     "!(.prettierignore)*.*": "yarn lint:fix",

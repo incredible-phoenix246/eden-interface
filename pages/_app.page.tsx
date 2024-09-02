@@ -24,13 +24,13 @@ import createEmotionCache from '../src/createEmotionCache';
 import { AppGlobalStyles } from '../src/layouts/AppGlobalStyles';
 import { LanguageProvider } from '../src/libs/LanguageProvider';
 
-const SwitchModal = dynamic(() =>
-  import('src/components/transactions/Switch/SwitchModal').then((module) => module.SwitchModal)
-);
+// const SwitchModal = dynamic(() =>
+//   import('src/components/transactions/Switch/SwitchModal').then((module) => module.SwitchModal)
+// );
 
-const BridgeModal = dynamic(() =>
-  import('src/components/transactions/Bridge/BridgeModal').then((module) => module.BridgeModal)
-);
+// const BridgeModal = dynamic(() =>
+//   import('src/components/transactions/Bridge/BridgeModal').then((module) => module.BridgeModal)
+// );
 
 const BorrowModal = dynamic(() =>
   import('src/components/transactions/Borrow/BorrowModal').then((module) => module.BorrowModal)
@@ -67,19 +67,19 @@ const RepayModal = dynamic(() =>
 const SupplyModal = dynamic(() =>
   import('src/components/transactions/Supply/SupplyModal').then((module) => module.SupplyModal)
 );
-const SwapModal = dynamic(() =>
-  import('src/components/transactions/Swap/SwapModal').then((module) => module.SwapModal)
-);
+// const SwapModal = dynamic(() =>
+//   import('src/components/transactions/Swap/SwapModal').then((module) => module.SwapModal)
+// );
 const WithdrawModal = dynamic(() =>
   import('src/components/transactions/Withdraw/WithdrawModal').then(
     (module) => module.WithdrawModal
   )
 );
-const StakingMigrateModal = dynamic(() =>
-  import('src/components/transactions/StakingMigrate/StakingMigrateModal').then(
-    (module) => module.StakingMigrateModal
-  )
-);
+// const StakingMigrateModal = dynamic(() =>
+//   import('src/components/transactions/StakingMigrate/StakingMigrateModal').then(
+//     (module) => module.StakingMigrateModal
+//   )
+// );
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
@@ -99,6 +99,7 @@ interface MyAppProps extends AppProps {
   emotionCache?: EmotionCache;
   Component: NextPageWithLayout;
 }
+
 export default function MyApp(props: MyAppProps) {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
   const getLayout = Component.getLayout ?? ((page: ReactNode) => page);
@@ -131,9 +132,9 @@ export default function MyApp(props: MyAppProps) {
       <Meta
         title={'Open Source Liquidity Protocol'}
         description={
-          'Aave is an Open Source Protocol to create Non-Custodial Liquidity Markets to earn interest on supplying and borrowing assets with a variable or stable interest rate. The protocol is designed for easy integration into your products and services.'
+          'Eden Finance is an Open Source Protocol to create Non-Custodial Liquidity Markets to earn interest on supplying and borrowing assets with a variable or stable interest rate. The protocol is designed for easy integration into your products and services.'
         }
-        imageUrl="https://app.aave.com/aave-com-opengraph.png"
+        imageUrl="https://app.eden.finance/aave-com-opengraph.png"
       />
       <LanguageProvider>
         <QueryClientProvider client={queryClient}>
@@ -155,12 +156,12 @@ export default function MyApp(props: MyAppProps) {
                           <DebtSwitchModal />
                           <ClaimRewardsModal />
                           <EmodeModal />
-                          <SwapModal />
+                          {/* <SwapModal /> */}
                           <FaucetModal />
                           <TransactionEventHandler />
-                          <SwitchModal />
-                          <StakingMigrateModal />
-                          <BridgeModal />
+                          {/* <SwitchModal /> */}
+                          {/* <StakingMigrateModal /> */}
+                          {/* <BridgeModal /> */}
                         </GasStationProvider>
                       </AppDataProvider>
                     </SharedDependenciesProvider>

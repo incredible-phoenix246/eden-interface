@@ -34,7 +34,7 @@ export const MigrateV3ModalContent = ({
 }: MigrationV3ModalContentProps) => {
   const currentChainId = useRootStore((store) => store.currentChainId);
   const setCurrentMarket = useRootStore((store) => store.setCurrentMarket);
-  const currentMarket = useRootStore((store) => store.currentMarket);
+  // const currentMarket = useRootStore((store) => store.currentMarket);
 
   const { gasLimit, mainTxState: migrateTxState, txError, closeWithCb } = useModalContext();
   const { chainId: connectedChainId, readOnlyModeAddress } = useWeb3Context();
@@ -90,21 +90,21 @@ export const MigrateV3ModalContent = ({
     return <TxErrorView txError={txError} />;
   }
 
-  const handleRoute = (market: CustomMarket) => {
-    if (market === CustomMarket.proto_polygon) {
-      setCurrentMarket('proto_polygon_v3' as CustomMarket);
-      router.push(`/?marketName=${CustomMarket.proto_polygon_v3}`);
-    } else if (market === CustomMarket.proto_avalanche) {
-      setCurrentMarket('proto_avalanche_v3' as CustomMarket);
-      router.push(`/?marketName=${CustomMarket.proto_avalanche_v3}`);
-    } else {
-      setCurrentMarket('proto_mainnet_v3' as CustomMarket);
-      router.push(`/?marketName=${CustomMarket.proto_mainnet_v3}`);
-    }
+  const handleRoute = () => {
+    // if (market === CustomMarket.proto_polygon) {
+    //   setCurrentMarket('proto_polygon_v3' as CustomMarket);
+    //   router.push(`/?marketName=${CustomMarket.proto_polygon_v3}`);
+    // } else if (market === CustomMarket.proto_avalanche) {
+    //   setCurrentMarket('proto_avalanche_v3' as CustomMarket);
+    //   router.push(`/?marketName=${CustomMarket.proto_avalanche_v3}`);
+    // } else {
+    setCurrentMarket('proto_mainnet_v3' as CustomMarket);
+    router.push(`/?marketName=${CustomMarket.proto_mainnet_v3}`);
+    // }
   };
 
   const handleGoToDashboard = () => {
-    closeWithCb(() => handleRoute(currentMarket));
+    closeWithCb(() => handleRoute());
   };
 
   if (migrateTxState.success) {

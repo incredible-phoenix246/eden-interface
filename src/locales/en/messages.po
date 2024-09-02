@@ -917,10 +917,6 @@ msgstr "Disable E-Mode"
 msgid "Disable fork"
 msgstr "Disable fork"
 
-#: src/layouts/AppHeader.tsx
-msgid "Disable testnet"
-msgstr "Disable testnet"
-
 #: src/components/transactions/CollateralChange/CollateralChangeActions.tsx
 msgid "Disable {symbol} as collateral"
 msgstr "Disable {symbol} as collateral"
@@ -1099,7 +1095,6 @@ msgid "Estimated time"
 msgstr "Estimated time"
 
 #: src/modules/dashboard/DashboardContentWrapper.tsx
-#: src/modules/markets/MarketsTopPanel.tsx
 msgid "Ethereum Main"
 msgstr "Ethereum Main"
 
@@ -1235,10 +1230,6 @@ msgstr "Go to Balancer Pool"
 #: src/components/transactions/MigrateV3/MigrateV3ModalContent.tsx
 msgid "Go to V3 Dashboard"
 msgstr "Go to V3 Dashboard"
-
-#: src/ui-config/menu-items/index.tsx
-msgid "Governance"
-msgstr "Governance"
 
 #: src/layouts/components/LanguageSwitcher.tsx
 msgid "Greek"
@@ -1410,7 +1401,6 @@ msgid "Let us know how we can make the app better for you. For user support rela
 msgstr "Let us know how we can make the app better for you. For user support related inquiries please reach out on"
 
 #: src/modules/dashboard/DashboardContentWrapper.tsx
-#: src/modules/markets/MarketsTopPanel.tsx
 msgid "Lido"
 msgstr "Lido"
 
@@ -1487,20 +1477,16 @@ msgstr "MAI has been paused due to a community decision. Supply, borrows and rep
 msgid "MAX"
 msgstr "MAX"
 
-#: src/modules/markets/MarketsTopPanel.tsx
-msgid "Main"
-msgstr "Main"
-
 #: src/layouts/AppFooter.tsx
 msgid "Manage analytics"
 msgstr "Manage analytics"
 
 #: src/modules/reserve-overview/ReserveTopDetailsWrapper.tsx
+#: src/ui-config/menu-items/index.tsx
 msgid "Market"
 msgstr "Market"
 
 #: src/modules/markets/MarketsTopPanel.tsx
-#: src/ui-config/menu-items/index.tsx
 msgid "Markets"
 msgstr "Markets"
 
@@ -1578,11 +1564,6 @@ msgstr "Merit Program rewards are claimed through the"
 #: src/components/transactions/StakingMigrate/StakingMigrateActions.tsx
 msgid "Migrate"
 msgstr "Migrate"
-
-#: src/layouts/MobileMenu.tsx
-#: src/layouts/MoreMenu.tsx
-msgid "Migrate to Aave V3"
-msgstr "Migrate to Aave V3"
 
 #: src/components/TopInfoPanel/PageTitle.tsx
 msgid "Migrate to V3"
@@ -1747,7 +1728,6 @@ msgstr "Not enough voting power to participate in this proposal"
 msgid "Not reached"
 msgstr "Not reached"
 
-#: pages/v3-migration.page.tsx
 #: src/modules/dashboard/lists/BorrowedPositionsList/BorrowedPositionsList.tsx
 msgid "Nothing borrowed yet"
 msgstr "Nothing borrowed yet"
@@ -1761,7 +1741,6 @@ msgstr "Nothing found"
 msgid "Nothing staked"
 msgstr "Nothing staked"
 
-#: pages/v3-migration.page.tsx
 #: src/modules/dashboard/lists/SuppliedPositionsList/SuppliedPositionsList.tsx
 msgid "Nothing supplied yet"
 msgstr "Nothing supplied yet"
@@ -1824,10 +1803,6 @@ msgstr "Please connect your wallet to be able to switch your tokens."
 #: src/modules/faucet/FaucetAssetsList.tsx
 msgid "Please connect your wallet to get free testnet assets."
 msgstr "Please connect your wallet to get free testnet assets."
-
-#: pages/v3-migration.page.tsx
-msgid "Please connect your wallet to see migration tool."
-msgstr "Please connect your wallet to see migration tool."
 
 #: src/components/ConnectWalletPaper.tsx
 #: src/components/ConnectWalletPaperStaking.tsx
@@ -2293,7 +2268,6 @@ msgstr "Stablecoin"
 #: src/components/transactions/Stake/StakeActions.tsx
 #: src/modules/staking/StakingPanel.tsx
 #: src/modules/staking/StakingPanel.tsx
-#: src/ui-config/menu-items/index.tsx
 msgid "Stake"
 msgstr "Stake"
 

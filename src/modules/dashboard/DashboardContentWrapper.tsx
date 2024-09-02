@@ -46,7 +46,7 @@ export const DashboardContentWrapper = ({ isBorrow }: DashboardContentWrapperPro
 
   return (
     <Box>
-      {currentAccount && MULTIPLE_MARKET_OPTIONS.includes(currentMarket) && (
+      {currentAccount && (
         <Box pb={2} sx={{ width: upFromSm ? '320px' : '100%' }}>
           <StyledTxModalToggleGroup
             color="secondary"

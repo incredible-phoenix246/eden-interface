@@ -55,7 +55,7 @@ export const MarketsTopPanel = () => {
         containerProps={marketContainerProps}
         pageTitle={<Trans>Markets</Trans>}
         withMarketSwitcher
-        multiMarket={MULTIPLE_MARKET_OPTIONS.includes(currentMarket) ? true : false}
+        multiMarket={false}
       >
         <Box sx={{ display: 'flex', gap: { xs: 3, xsm: 8 } }}>
           <TopInfoPanelItem hideIcon title={<Trans>Total market size</Trans>} loading={loading}>
@@ -93,7 +93,7 @@ export const MarketsTopPanel = () => {
           </TopInfoPanelItem>
         </Box>
 
-        {MULTIPLE_MARKET_OPTIONS.includes(currentMarket) && (
+        {/* {MULTIPLE_MARKET_OPTIONS.includes(currentMarket) && (
           <Box pb={0} sx={{ width: 'calc(50% - 8px)' }}>
             <StyledTxModalToggleGroup
               color="secondary"
@@ -152,7 +152,7 @@ export const MarketsTopPanel = () => {
               </StyledTxModalToggleButton>
             </StyledTxModalToggleGroup>
           </Box>
-        )}
+        )} */}
       </TopInfoPanel>
     </Box>
   );
