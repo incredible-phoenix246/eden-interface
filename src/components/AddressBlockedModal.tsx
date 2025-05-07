@@ -12,7 +12,7 @@ export interface AddressBlockedProps {
 
 export const AddressBlockedModal = ({ address, onDisconnectWallet }: AddressBlockedProps) => {
   // eslint-disable-next-line @typescript-eslint/no-empty-function, @typescript-eslint/no-unused-vars
-  const setOpen = (_value: boolean) => {}; // ignore, we want the modal to not be dismissable
+  const setOpen = (_value: boolean) => { }; // ignore, we want the modal to not be dismissable
 
   return (
     <BasicModal open={true} withCloseButton={false} setOpen={setOpen}>
@@ -35,9 +35,9 @@ export const AddressBlockedModal = ({ address, onDisconnectWallet }: AddressBloc
         </Typography>
         <Typography variant="description" sx={{ textAlign: 'center', mb: 4 }}>
           <Trans>
-            This address is blocked on app.aave.com because it is associated with one or more
+            This address is blocked on eden.codemon.me because it is associated with one or more
           </Trans>{' '}
-          <Link href="https://docs.aave.com/faq/#address-screening" underline="always">
+          <Link href="https://docs.eden.finance/faq/#address-screening" underline="always">
             <Trans>blocked activities</Trans>
           </Link>
           {'.'}

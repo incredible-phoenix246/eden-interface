@@ -431,7 +431,7 @@ const GhoDiscountParametersComponent: React.FC<{
           Discount parameters are decided by the Aave community and may be changed over time. Check
           Governance for updates and vote to participate.{' '}
           <Link
-            href="https://governance.aave.com"
+            href="https://governance.eden.finance"
             sx={{ textDecoration: 'underline' }}
             variant="caption"
             color="text.secondary"

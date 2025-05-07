@@ -129,9 +129,9 @@ export const BorrowAssetsList = () => {
         iconSymbol: reserve.iconSymbol,
         ...(reserve.isWrappedBaseAsset
           ? fetchIconSymbolAndName({
-              symbol: baseAssetSymbol,
-              underlyingAsset: API_ETH_MOCK_ADDRESS.toLowerCase(),
-            })
+            symbol: baseAssetSymbol,
+            underlyingAsset: API_ETH_MOCK_ADDRESS.toLowerCase(),
+          })
           : {}),
       };
     });
@@ -142,19 +142,19 @@ export const BorrowAssetsList = () => {
   const collateralUsagePercent = maxBorrowAmount.eq(0)
     ? '0'
     : valueToBigNumber(user?.totalBorrowsMarketReferenceCurrency || '0')
-        .div(maxBorrowAmount)
-        .toFixed();
+      .div(maxBorrowAmount)
+      .toFixed();
 
   const borrowReserves =
     user?.totalCollateralMarketReferenceCurrency === '0' || +collateralUsagePercent >= 0.98
       ? tokensToBorrow
       : tokensToBorrow.filter(({ availableBorrowsInUSD, totalLiquidityUSD, symbol }) => {
-          if (displayGhoForMintableMarket({ symbol, currentMarket })) {
-            return true;
-          }
+        if (displayGhoForMintableMarket({ symbol, currentMarket })) {
+          return true;
+        }
 
-          return availableBorrowsInUSD !== '0.00' && totalLiquidityUSD !== '0';
-        });
+        return availableBorrowsInUSD !== '0.00' && totalLiquidityUSD !== '0';
+      });
 
   const { value: ghoReserve, filtered: filteredReserves } = findAndFilterMintableGhoReserve(
     borrowReserves,
@@ -241,7 +241,7 @@ export const BorrowAssetsList = () => {
                 {user?.isInIsolationMode && (
                   <Warning severity="warning">
                     <Trans>Borrowing power and assets are limited due to Isolation mode. </Trans>
-                    <Link href="https://docs.aave.com/faq/" target="_blank" rel="noopener">
+                    <Link href="https://docs.eden.finance/faq/" target="_blank" rel="noopener">
                       Learn More
                     </Link>
                   </Warning>

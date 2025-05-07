@@ -47,8 +47,8 @@ const DelegatedPower: React.FC<DelegatedPowerProps> = ({
       </Typography>
       <Box sx={{ display: 'flex', gap: 4, flexDirection: 'column' }}>
         {aaveDelegatee !== ZERO_ADDRESS &&
-        aaveDelegatee === stkAaveDelegatee &&
-        aaveDelegatee === aAaveDelegatee ? (
+          aaveDelegatee === stkAaveDelegatee &&
+          aaveDelegatee === aAaveDelegatee ? (
           <Row
             align="flex-start"
             caption={
@@ -173,7 +173,7 @@ export const DelegatedInfoPanel = () => {
             protocol. You can re-delegate or revoke power to self at any time.
           </Trans>
           <Link
-            href="https://docs.aave.com/developers/v/2.0/protocol-governance/governance"
+            href="https://docs.eden.finance/developers/v/2.0/protocol-governance/governance"
             target="_blank"
             variant="description"
             color="text.secondary"

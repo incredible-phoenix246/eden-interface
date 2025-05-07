@@ -66,9 +66,9 @@ export const MarketAssetsListContainer = () => {
       ...reserve,
       ...(reserve.isWrappedBaseAsset
         ? fetchIconSymbolAndName({
-            symbol: currentNetworkConfig.baseAssetSymbol,
-            underlyingAsset: API_ETH_MOCK_ADDRESS.toLowerCase(),
-          })
+          symbol: currentNetworkConfig.baseAssetSymbol,
+          underlyingAsset: API_ETH_MOCK_ADDRESS.toLowerCase(),
+        })
         : {}),
     }));
   const marketFrozen = !reserves.some((reserve) => !reserve.isFrozen);
@@ -137,7 +137,7 @@ export const MarketAssetsListContainer = () => {
                       frozenMarket: currentNetworkConfig.name,
                     });
                   }}
-                  href="https://governance.aave.com"
+                  href="https://governance.eden.finance"
                   underline="always"
                 >
                   Aave governance forum

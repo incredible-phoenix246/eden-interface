@@ -98,10 +98,10 @@ export const SupplyAssetsList = () => {
 
       const usageAsCollateralEnabledOnUser = !user?.isInIsolationMode
         ? reserve.reserveLiquidationThreshold !== '0' &&
-          (!isIsolated || (isIsolated && !hasDifferentCollateral))
+        (!isIsolated || (isIsolated && !hasDifferentCollateral))
         : !isIsolated
-        ? false
-        : !hasDifferentCollateral;
+          ? false
+          : !hasDifferentCollateral;
 
       if (reserve.isWrappedBaseAsset) {
         let baseAvailableToDeposit = valueToBigNumber(
@@ -190,8 +190,8 @@ export const SupplyAssetsList = () => {
   const supplyReserves: unknown = isShowZeroAssets
     ? sortedSupplyReserves
     : filteredSupplyReserves.length >= 1
-    ? filteredSupplyReserves
-    : sortedSupplyReserves;
+      ? filteredSupplyReserves
+      : sortedSupplyReserves;
 
   // Transform to the DashboardReserve schema so the sort utils can work with it
   const preSortedReserves = supplyReserves as DashboardReserve[];
@@ -263,7 +263,7 @@ export const SupplyAssetsList = () => {
               <Warning severity="warning">
                 <Trans>
                   Collateral usage is limited because of isolation mode.{' '}
-                  <Link href="https://docs.aave.com/faq/" target="_blank" rel="noopener">
+                  <Link href="https://docs.eden.finance/faq/" target="_blank" rel="noopener">
                     Learn More
                   </Link>
                 </Trans>
